@@ -12,3 +12,15 @@ for x in list:
 print(div_by_3)
 print('without using list comprehension',div_by_3)
 print('using list comprehension',[x for x in list if x%3==0])
+
+dict1 = {'a':45,'b':65,'A':15}
+print(dict1['a'])
+print({k.lower(): dict1.get(k.lower(),0) + dict1.get(k.upper(),0) for k in dict1.keys()})
+
+squared = {x**2 for x in [1,2,1,2,3,5,4,7,7]}
+print(squared)
+# create only object and save memory but take more time
+gen = {i for i in range(56) if i%3==0}
+
+for item in gen:
+    print(item)
